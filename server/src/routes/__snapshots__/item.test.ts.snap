@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes items does check parameters on create 1`] = `[Error: Please provide an item]`;
+
+exports[`routes items does check parameters on remove 1`] = `[Error: Please provide an id]`;
