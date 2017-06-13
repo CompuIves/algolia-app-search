@@ -1,0 +1,17 @@
+[ignore]
+# We vendor our src directory, which is not needed for type-checking
+.*/styled-components/src/.*
+.*/eslint-plugin-jsx-a11y/.*
+
+[include]
+
+[libs]
+# This is were your own flow-typed libdefs go
+flow-typed
+
+[options]
+module.system.node.resolve_dirname=node_modules
+
+# Yeah, we use this to ignore errors...
+# Just add it, if you have a different suppress_comment notation
+suppress_comment=.*\\$FlowIssue
