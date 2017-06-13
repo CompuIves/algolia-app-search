@@ -6,7 +6,7 @@
     "algoliasearch": "^3.23.0",
     "algoliasearch-helper": "^2.20.1",
     "flow-bin": "^0.47.0",
-    "lodash": "^4.17.4",
+    "lodash.truncate": "^4.4.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-icons": "^2.2.5",

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
-import { truncate } from 'lodash';
+import truncate from 'lodash.truncate';
 
 import Rating from './Rating';
 
