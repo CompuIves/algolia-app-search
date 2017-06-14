@@ -82,6 +82,7 @@ export default class SearchBar extends React.PureComponent {
           value={value}
           onChange={this.updateValue}
           placeholder="Search for an app"
+          type="search"
         />
         {value && <CloseIcon onClick={this.clearSearch} />}
       </Container>

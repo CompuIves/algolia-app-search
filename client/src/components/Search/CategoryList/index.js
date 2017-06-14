@@ -28,7 +28,7 @@ const CategoryCard = styled(Card)`
 `;
 
 const CategoryTitle = styled.div`
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 400;
   margin-top: 0.25em;
   margin-bottom: 1em;
