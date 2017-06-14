@@ -7,7 +7,7 @@ import CategoryList from './CategoryList';
 import Results from './Results';
 import Pagination from './Pagination';
 import Flex from '../Flex';
-import SubTitle from '../SubTitle';
+import { DivSubTitle } from '../SubTitle';
 
 import { addListener, setRankOrder, helper } from '../../services/algolia';
 import type { AlgoliaResponse } from '../../services/algolia.types';
@@ -79,7 +79,7 @@ export default class Search extends React.PureComponent {
   render() {
     const { query, searchState, orderAscend } = this.state;
 
-    if (searchState == null) return <SubTitle>Loading...</SubTitle>;
+    if (searchState == null) return <DivSubTitle>Loading...</DivSubTitle>;
 
     return (
       <Flex>
