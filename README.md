@@ -26,6 +26,59 @@ You can find a running version [here](https://algolia-client-qirpapvkyf.now.sh).
 ## Server
 The server can add items to the index and delete them. It's built using TypeScript and uses `koa`. It has its own validator for parameters.
 
+### Endpoints
+
+#### Create item
+You can do a POST request to `/api/1/apps` with body:
+
+```json
+{
+  "item": {
+    "category": string,
+    "rating": number,
+    "name": string,
+    "image": string,
+    "link": string,
+    "ratingCount": number,
+    "price": string
+  }
+}
+```
+
+The response will be
+
+```json
+{
+  "status": "success",
+  "item": /* actual item */,
+  "info": /* response from algolia */
+}
+```
+
+#### Delete item
+You can do a DELETE request to `/api/1/apps/:objectId` to delete an item.
+
+The response will be
+
+```json
+{
+  "status": "success",
+  "info": /* response from algolia */
+}
+```
+
+#### Errors
+
+The server will return with:
+
+```json
+{
+  "error": "Error message"
+}
+```
+
+when an error happens.
+
 ### Starting
 
 For the server you need to set the environment variables `ALGOLIA_APPLICATION_ID` and `ALGOLIA_ADMIN_KEY`. These are used by the server to connect with the Algolia API. The server runs by default on port **4000**.
