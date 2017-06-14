@@ -13,13 +13,14 @@
     "styled-components": "^2.0.1"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.0.7",
+    "serve": "^5.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
+    "now-start": "serce -s buid",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && ns build"
+    "eject": "react-scripts eject"
   }
 }
