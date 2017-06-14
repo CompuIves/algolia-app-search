@@ -12,10 +12,22 @@ if (!APPLICATION_ID || !ADMIN_KEY) {
 const client = algoliasearch(APPLICATION_ID, ADMIN_KEY);
 const index = client.initIndex('apps');
 
+/**
+ * Adds an item to the Algolia index
+ * 
+ * @param {Item} item 
+ * @returns The result returned from the Algolia API
+ */
 export async function addItem(item: Item) {
   return await index.addObject(item);
 }
 
+/**
+ * Removes an item from the Algolia index
+ * 
+ * @param {string} id The objectId that corresponds to the item
+ * @returns The result returned from the Algolia API
+ */
 export async function removeItem(id: string) {
   return await index.deleteObject(id);
 }

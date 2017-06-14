@@ -20,6 +20,9 @@ const itemTypeDefinition = {
 };
 const validateItem = generateValidation(itemTypeDefinition);
 
+/**
+ * This route removes an item from the Algolia index, it's called as a DELETE request
+ */
 export const deleteRoute = async (ctx: Context) => {
   const { id } = ctx.params;
 
@@ -32,6 +35,18 @@ export const deleteRoute = async (ctx: Context) => {
   ctx.body = { status: 'success', info };
 };
 
+/**
+ * This route is responsible for creating items, it's called as a POST request
+ * with payload
+ * 
+ * ```
+ * {
+ *  "item": {
+ *    // Actual item info
+ *  }
+ * }
+ * ```
+ */
 export const createRoute = async (ctx: Context) => {
   const { item } = ctx.request.body;
 
