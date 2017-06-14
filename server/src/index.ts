@@ -12,7 +12,7 @@ import notFoundHandler from './middleware/not-found';
 // --- ROUTES ---
 import { deleteRoute, createRoute } from './routes/items';
 
-const DEFAULT_PORT = 4000;
+const DEFAULT_PORT = process.env.PORT || 4000;
 
 const app = new Koa();
 
