@@ -28,7 +28,7 @@ const NavigationButton = styled.span`
   transition: 0.3s ease all;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 1rem;
+  margin: 0 1em;
   font-size: 1.5em;
 
   ${({ onClick }) =>

@@ -28,10 +28,10 @@ const CategoryCard = styled(Card)`
 `;
 
 const CategoryTitle = styled.div`
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 400;
   margin-top: 0.25em;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 `;
 
 class CategoryList extends Component {

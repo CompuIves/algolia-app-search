@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Checkbox from '../../Checkbox';
 
 const Container = styled.div`
-  padding: 0.25rem 0;
+  padding: 0.25em 0;
   vertical-align: middle;
 
   cursor: pointer;
@@ -13,7 +13,7 @@ const Container = styled.div`
 
 const Count = styled.div`
   float: right;
-  font-size: .75rem;
+  font-size: .75em;
   text-align: right;
   background-color: #EAEAEA;
   color: rgba(0, 0, 0, 0.4);

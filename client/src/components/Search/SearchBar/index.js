@@ -15,15 +15,15 @@ const Input = styled.input`
   transition: 0.3s ease all;
 
   width: 100%;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  border-radius: 1.25rem;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 1.25em;
 
-  padding: 0 1.25rem;
-  padding-right: 2.5rem;
+  padding: 0 1.25em;
+  padding-right: 2.5em;
 
   color: #2D568D;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   vertical-align: middle;
 
   border: 1px solid transparent;
@@ -44,12 +44,12 @@ const CloseIcon = styled(CloseIconSVG)`
   transition: 0.3s ease all;
 
   position: absolute;
-  right: 1rem;
+  right: 1em;
   top: 0;
   bottom: 0;
   margin: auto 0;
 
-  font-size: 1.25rem;
+  font-size: 1.25em;
 
   color: #2D568D;
   cursor: pointer;
