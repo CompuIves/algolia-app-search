@@ -7,6 +7,7 @@ import CategoryList from './CategoryList';
 import Results from './Results';
 import Pagination from './Pagination';
 import Flex from '../Flex';
+import SubTitle from '../SubTitle';
 
 import { addListener, setRankOrder, helper } from '../../services/algolia';
 import type { AlgoliaResponse } from '../../services/algolia.types';
@@ -78,33 +79,34 @@ export default class Search extends React.PureComponent {
   render() {
     const { query, searchState, orderAscend } = this.state;
 
+    if (searchState == null) return <SubTitle>Loading...</SubTitle>;
+
     return (
       <Flex>
-        {searchState &&
-          <CategoryList
-            categories={searchState.getFacetValues('category', {
-              sortBy: ['count:desc'],
-            })}
-            toggleCategory={this.toggleCategory}
-          />}
-        {searchState &&
-          <div style={{ flex: 1 }}>
-            <SearchBar value={query} setValue={this.setSearch} />
+        <CategoryList
+          categories={searchState.getFacetValues('category', {
+            sortBy: ['count:desc'],
+          })}
+          toggleCategory={this.toggleCategory}
+        />
 
-            <SearchInfo
-              processingTime={searchState.processingTimeMS}
-              toggleOrdering={this.toggleOrdering}
-              orderAscend={orderAscend}
-              totalHitCount={searchState.nbHits}
-            />
-            <Results hits={searchState.hits} />
+        <div style={{ flex: 1 }}>
+          <SearchBar value={query} setValue={this.setSearch} />
 
-            <Pagination
-              totalPageCount={searchState.nbPages}
-              page={searchState.page}
-              setPage={this.setPage}
-            />
-          </div>}
+          <SearchInfo
+            processingTime={searchState.processingTimeMS}
+            toggleOrdering={this.toggleOrdering}
+            orderAscend={orderAscend}
+            totalHitCount={searchState.nbHits}
+          />
+          <Results hits={searchState.hits} />
+
+          <Pagination
+            totalPageCount={searchState.nbPages}
+            page={searchState.page}
+            setPage={this.setPage}
+          />
+        </div>
       </Flex>
     );
   }
