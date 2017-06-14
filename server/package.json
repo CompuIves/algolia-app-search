@@ -6,7 +6,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "start": "node dist",
-    "build": "tsc"
+    "build": "tsc -p tsconfig.json"
   },
   "author": "",
   "license": "ISC",
