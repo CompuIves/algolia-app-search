@@ -5,7 +5,6 @@
   "dependencies": {
     "algoliasearch": "^3.23.0",
     "algoliasearch-helper": "^2.20.1",
-    "flow-bin": "^0.47.0",
     "lodash.truncate": "^4.4.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -13,12 +12,13 @@
     "styled-components": "^2.0.1"
   },
   "devDependencies": {
+    "flow-bin": "^0.47.0",
     "react-scripts": "1.0.7",
     "serve": "^5.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "now-start": "serce -s buid",
+    "now-start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
