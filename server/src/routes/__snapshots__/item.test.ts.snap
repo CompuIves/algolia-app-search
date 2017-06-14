@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`routes items does check parameters on create 1`] = `[Error: Please provide an item]`;
+exports[`routes items can create an item 1`] = `
+Object {
+  "info": Object {
+    "category": "Games",
+    "image": "http://a567.phobos.apple.com/us/r1000/112/Purple/v4/f2/ec/56/f2ec5676-3c96-ab7e-39f2-5e98e9662040/Icon.png",
+    "link": "https://itunes.apple.com/us/app/draw-something-free/id488628250",
+    "name": "Draw Something Free",
+    "price": "0 USD",
+    "rating": 4.5,
+    "ratingCount": 1670278,
+  },
+  "item": Object {
+    "category": "Games",
+    "image": "http://a567.phobos.apple.com/us/r1000/112/Purple/v4/f2/ec/56/f2ec5676-3c96-ab7e-39f2-5e98e9662040/Icon.png",
+    "link": "https://itunes.apple.com/us/app/draw-something-free/id488628250",
+    "name": "Draw Something Free",
+    "price": "0 USD",
+    "rating": 4.5,
+    "ratingCount": 1670278,
+  },
+  "status": "success",
+}
+`;
+
+exports[`routes items does check parameters on create 1`] = `[Error: No entity is provided]`;
 
 exports[`routes items does check parameters on remove 1`] = `[Error: Please provide an id]`;

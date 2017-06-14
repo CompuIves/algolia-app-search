@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`body-checker can detect missing fields 1`] = `
+Array [
+  "'title' is missing",
+]
+`;
+
+exports[`body-checker can detect wrong types 1`] = `
+Array [
+  "title: type is number, should be string",
+]
+`;
+
+exports[`body-checker can throw multiple errors 1`] = `
+Array [
+  "title: type is number, should be string",
+  "rating: type is string, should be number",
+]
+`;
+
+exports[`body-checker can work with more fields 1`] = `Array []`;
+
+exports[`body-checker doesn't error on right types 1`] = `Array []`;
+
+exports[`body-checker ignores non-required fields 1`] = `Array []`;
+
+exports[`body-checker validates more fields 1`] = `
+Array [
+  "rating: type is number, should be string",
+]
+`;
+
+exports[`body-checker works with null objects 1`] = `
+Array [
+  "No entity is provided",
+]
+`;

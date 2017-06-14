@@ -23,18 +23,20 @@ describe('routes', () => {
         price: '0 USD',
       };
       const context = {
-        params: {
-          item,
+        request: {
+          body: {
+            item,
+          },
         },
       };
 
       const result = await createRoute(context);
 
-      expect(context.body).toEqual({ status: 'success', item });
+      expect(context.body).toMatchSnapshot();
     });
 
     it('does check parameters on create', async () => {
-      return createRoute({ params: {} }).catch(e => {
+      return createRoute({ request: { body: {} } }).catch(e => {
         expect(e).toMatchSnapshot();
       });
     });
@@ -48,7 +50,7 @@ describe('routes', () => {
 
       const result = await deleteRoute(context);
 
-      expect(context.body).toEqual({ status: 'success', item: { id: 'item' } });
+      expect(context.body).toEqual({ status: 'success', info: { id: 'item' } });
     });
 
     it('does check parameters on remove', async () => {

@@ -1,5 +1,6 @@
 import * as Koa from 'koa';
 import * as Router from 'koa-router';
+import * as bodyParser from 'koa-bodyparser';
 
 import log from './utils/log';
 
@@ -15,6 +16,7 @@ const DEFAULT_PORT = 4000;
 
 const app = new Koa();
 
+app.use(bodyParser());
 app.use(errorHandler);
 app.use(logger);
 app.use(notFoundHandler);
