@@ -47,7 +47,7 @@ export default ({ totalPageCount, page, setPage }: Props) => {
   // We want to keep the pages user friendly (so no 0 page), add 1
   const addedPage = page + 1;
 
-  const prevPageFunction = addedPage > 0 && (() => setPage(page - 1));
+  const prevPageFunction = addedPage > 1 && (() => setPage(page - 1));
   const nextPageFunction =
     addedPage < totalPageCount && (() => setPage(page + 1));
 
