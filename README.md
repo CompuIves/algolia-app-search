@@ -20,7 +20,7 @@ yarn start
 
 ### Online (or offline as PWA)
 
-You can find a running version [here](https://algolia-client-uewubwgums.now.sh/).
+You can find a running version [here](https://algolia-client-qirpapvkyf.now.sh).
 
 
 ## Server
