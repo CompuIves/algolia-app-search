@@ -34,13 +34,13 @@ You can do a POST request to `/api/1/apps` with body:
 ```json
 {
   "item": {
-    "category": string,
-    "rating": number,
-    "name": string,
-    "image": string,
-    "link": string,
-    "ratingCount": number,
-    "price": string
+    "category": "string",
+    "rating": 2, // between 1-5
+    "name": "string",
+    "image": "string",
+    "link": "string",
+    "ratingCount": 2,
+    "price": "string"
   }
 }
 ```
@@ -50,8 +50,20 @@ The response will be
 ```json
 {
   "status": "success",
-  "item": /* actual item */,
-  "info": /* response from algolia */
+  "item": { // the item
+    "category": "string",
+    "rating": 2,
+    "name": "string",
+    "image": "string",
+    "link": "string",
+    "ratingCount": 2,
+    "price": "string"
+  },
+  "info": { // response from algolia
+    "deletedAt": "2017-06-14T17:14:05.286Z",
+    "taskID": 537670,
+    "objectID": "284231"
+  }
 }
 ```
 
@@ -63,7 +75,11 @@ The response will be
 ```json
 {
   "status": "success",
-  "info": /* response from algolia */
+  "info": { // response from algolia
+    "deletedAt": "2017-06-14T17:14:05.286Z",
+    "taskID": 537670,
+    "objectID": "284231"
+  }
 }
 ```
 
