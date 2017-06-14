@@ -32,9 +32,7 @@ export const deleteRoute = async (ctx: Context) => {
   ctx.body = { status: 'success', info };
 };
 
-export const createRoute = async (
-  ctx: Context & { request: { body: { item?: Item } } },
-) => {
+export const createRoute = async (ctx: Context) => {
   const { item } = ctx.request.body;
 
   const errors = validateItem(item);
@@ -44,7 +42,7 @@ export const createRoute = async (
   }
 
   // Only pick the keys that are in our type definition, drop other keys
-  const pickedItem = pickBy(item, (value, key) => {
+  const pickedItem = pickBy(item, (value: any, key) => {
     return key in itemTypeDefinition;
   }) as Item;
 
