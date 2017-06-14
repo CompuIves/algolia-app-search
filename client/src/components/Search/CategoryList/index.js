@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import type { CategoryData } from '../../../services/algolia.types';
@@ -34,29 +34,18 @@ const CategoryTitle = styled.div`
   margin-bottom: 1em;
 `;
 
-class CategoryList extends Component {
-  props: Props;
-
-  render() {
-    const { categories, toggleCategory } = this.props;
-
-    return (
-      <CategoryCard>
-        <CategoryTitle>Category</CategoryTitle>
-        <div>
-          {categories.map(cat =>
-            <Category
-              key={cat.name}
-              name={cat.name}
-              count={cat.count}
-              checked={cat.isRefined}
-              toggleCategory={toggleCategory}
-            />,
-          )}
-        </div>
-      </CategoryCard>
-    );
-  }
-}
-
-export default CategoryList;
+export default ({ categories, toggleCategory }: Props) =>
+  <CategoryCard>
+    <CategoryTitle>Category</CategoryTitle>
+    <div>
+      {categories.map(cat =>
+        <Category
+          key={cat.name}
+          name={cat.name}
+          count={cat.count}
+          checked={cat.isRefined}
+          toggleCategory={toggleCategory}
+        />,
+      )}
+    </div>
+  </CategoryCard>;

@@ -25,28 +25,19 @@ type Props = {
   hits: Hit[],
 };
 
-export default class Results extends React.PureComponent {
-  props: Props;
-
-  render() {
-    const { hits } = this.props;
-    return (
-      <Container>
-
-        <Items>
-          {hits.map(hit =>
-            <App
-              key={hit.name}
-              name={hit.name}
-              rating={hit.rating}
-              ratingCount={hit.ratingCount}
-              imageUrl={hit.image}
-              appUrl={hit.link}
-              price={hit.price}
-            />,
-          )}
-        </Items>
-      </Container>
-    );
-  }
-}
+export default ({ hits }: Props) =>
+  <Container>
+    <Items>
+      {hits.map(hit =>
+        <App
+          key={hit.name}
+          name={hit.name}
+          rating={hit.rating}
+          ratingCount={hit.ratingCount}
+          imageUrl={hit.image}
+          appUrl={hit.link}
+          price={hit.price}
+        />,
+      )}
+    </Items>
+  </Container>;
