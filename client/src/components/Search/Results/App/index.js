@@ -67,7 +67,7 @@ export default ({
   price,
 }: Props) =>
   <Container href={appUrl} target="_blank" rel="noopener noreferrer">
-    <Image height={57} width={57} async src={imageUrl} />
+    <Image height={57} width={57} async src={imageUrl} alt={name} />
     <Rating rating={rating} ratingCount={ratingCount} />
     <Title title={name}>
       {truncate(name, {
