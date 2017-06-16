@@ -31,7 +31,7 @@ The server can add items to the index and delete them. It's built using TypeScri
 #### Create item
 You can do a POST request to `/api/1/apps` with body:
 
-```json
+```js
 {
   "item": {
     "category": "string",
@@ -47,7 +47,7 @@ You can do a POST request to `/api/1/apps` with body:
 
 The response will be
 
-```json
+```js
 {
   "status": "success",
   "item": { // the item
@@ -72,7 +72,7 @@ You can do a DELETE request to `/api/1/apps/:objectId` to delete an item.
 
 The response will be
 
-```json
+```js
 {
   "status": "success",
   "info": { // response from algolia
